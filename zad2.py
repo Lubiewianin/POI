@@ -63,3 +63,4 @@ ax.set_zlabel('z')
 ax.scatter3D(X[c1, 0], X[c1, 1], X[c1, 2], c="red")
 ax.scatter3D(X[c2, 0], X[c2, 1], X[c2, 2], c="blue")
 ax.scatter3D(X[c3, 0], X[c3, 1], X[c3, 2], c="cyan")
+
