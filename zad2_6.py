@@ -38,9 +38,9 @@ y_pred = clusterer.labels_
 c1 = y_pred == 0
 c2 = y_pred == 1
 c3 = y_pred == 2
-w1 = zip((X[c1, 0], X[c1, 1], X[c1, 2]))
-w2 = zip((X[c2, 0], X[c2, 1], X[c2, 2]))
-w3 = zip((X[c3, 0], X[c3, 1], X[c3, 2]))
+w1 = X[c1]
+w2 = X[c2]
+w3 = X[c3]
 
 plt.figure()
 ax = plt.axes(projection='3d')
@@ -51,5 +51,9 @@ ax.scatter3D(X[c1, 0], X[c1, 1], X[c1, 2], c="red")
 ax.scatter3D(X[c2, 0], X[c2, 1], X[c2, 2], c="blue")
 ax.scatter3D(X[c3, 0], X[c3, 1], X[c3, 2], c="cyan")
 
+best_eq = [0, 0, 0]
 plane1 = pyrsc.Plane()
-best_eq, best_inliers = plane1.fit(w1, 0.01)
+best_eq[0], best_inliers = plane1.fit(w1, 0.01)
+best_eq[1], best_inliers = plane1.fit(w2, 0.01)
+best_eq[2], best_inliers = plane1.fit(w3, 0.01)
+print(best_eq)
