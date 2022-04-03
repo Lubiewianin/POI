@@ -87,5 +87,3 @@ ax.scatter3D(X[c2, 0], X[c2, 1], X[c2, 2], c="blue")
 ax.scatter3D(X[c3, 0], X[c3, 1], X[c3, 2], c="cyan")
 
 ransac(w1)
-
-
